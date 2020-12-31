@@ -2,7 +2,7 @@
 
 <div class="row">
 	<!-- IF allowLocalLogin -->
-	<div class="<!-- IF alternate_logins -->col-md-6<!-- ELSE -->col-md-12<!-- ENDIF alternate_logins -->">
+	<div class="col-md-12">
 		<div class="login-block">
 			<div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -56,17 +56,4 @@
 		</div>
 	</div>
 	<!-- ENDIF allowLocalLogin -->
-
-	<!-- IF alternate_logins -->
-	<div class="<!-- IF allowLocalLogin -->col-md-6<!-- ELSE -->col-md-12<!-- ENDIF allowLocalLogin -->">
-		<div class="alt-login-block">
-			<h4>[[login:alternative_logins]]</h4>
-			<ul class="alt-logins">
-				{{{each authentication}}}
-				<li class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></li>
-				{{{end}}}
-			</ul>
-		</div>
-	</div>
-	<!-- ENDIF alternate_logins -->
 </div>
