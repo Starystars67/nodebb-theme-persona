@@ -21,6 +21,12 @@
 			<span class="formatted-number">{users.reputation}</span>
 		</div>
 		<!-- ENDIF section_sort-reputation -->
+		
+		<!-- IF users.isFriends -->
+		<button class="btn btn-link friend-button" data-uid="{users.uid}" data-type="unfriend" data-username="{users.username}">Remove Friend</button>
+		<!-- ELSE -->
+		<button class="btn btn-warning friend-button" data-uid="{users.uid}" data-type="friend" data-username="{users.username}">Add Friend</button>
+		<!-- ENDIF users.isFriends -->
 
 		<!-- IF section_sort-posts -->
 		<div title="post count" class="post-count">
